@@ -1,4 +1,7 @@
-app.controller('AlertsController', ['$scope', function($scope) {
+app.controller('AlertsController', ['$scope', 'alerts', function($scope, alerts) {
 
+    alerts.success(function(data){
+        $scope.alertList = data;
+    })
 
 }]);
