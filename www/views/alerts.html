@@ -1,14 +1,9 @@
 <ion-view title="EnergyCAP Alerts">
   <ion-content>
+
     <ul class="list">
-      <li class="item">
-        ...
-      </li>
-      <li class="item">
-        ...
-      </li>
-      <li class="item">
-        ...
+      <li class="item" ng-repeat="alert in $scope.alertList">
+        {{ item.alert_text }}
       </li>
     </ul>
 
