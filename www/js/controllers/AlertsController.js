@@ -1,6 +1,6 @@
-app.controller('AlertsController', ['$scope', 'alerts', function($scope, alerts) {
+app.controller('AlertsController', ['$scope', 'eci_alerts', function($scope, eci_alerts) {
 
-    alerts.success(function(data){
+    eci_alerts.success(function(data){
         $scope.alertList = data;
     });
 
