@@ -1,11 +1,21 @@
 <ion-view title="EnergyCAP Alerts">
   <ion-content>
 
-    <ul class="list">
-      <li class="item  item-text-wrap" ng-repeat="item in alertList">
-        {{ item.alert_text }}
-      </li>
-    </ul>
+      <ion-refresher
+              pulling-text="Pull to refresh..."
+              on-refresh="doRefresh()">
+      </ion-refresher>
+      <ion-list>
+          <ion-item class="item-text-wrap" ng-repeat="item in alertList">
+
+              <h2>{{ item.alert_text }}</h2>
+              <div class="text-right">
+                  <p>{{ item.alert_date * 1000 | date:'medium' }}</p>
+              </div>
+
+
+          </ion-item>
+      </ion-list>
 
   </ion-content>
 </ion-view>
